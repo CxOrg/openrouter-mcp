@@ -58,6 +58,30 @@ config files:
 
 A template is provided in [mcp_config.example.json](mcp_config.example.json).
 
+## Option 3 — Install from PyPI
+
+Once published (see [PUBLISHING.md](PUBLISHING.md)), no clone is needed:
+
+```bash
+uvx openrouter-mcp
+```
+
+Add the server to `~/.config/devin/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "openrouter": {
+      "command": "uvx",
+      "args": ["openrouter-mcp-server"],
+      "env": {
+        "OPENROUTER_API_KEY": "sk-or-v1-your-key-here"
+      }
+    }
+  }
+}
+```
+
 ## Other MCP clients
 
 The server speaks MCP over stdio and works with any client. For clients that

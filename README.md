@@ -20,6 +20,15 @@ step.
 
 ## Quick start
 
+**From PyPI** (after first publish — see [PUBLISHING.md](PUBLISHING.md)):
+
+```bash
+uvx openrouter-mcp        # run directly
+# or: pip install openrouter-mcp-server
+```
+
+**From source:**
+
 ```bash
 git clone https://github.com/CxOrg/openrouter-mcp.git
 cd openrouter-mcp

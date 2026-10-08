@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openrouter-mcp-server"
+version = "1.0.0"
+description = "Dependency-free MCP server exposing an openrouter_chat tool for AI agents"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Ian Newton" }]
+requires-python = ">=3.8"
+keywords = ["mcp", "openrouter", "llm", "ai", "model-context-protocol", "agent"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.scripts]
+openrouter-mcp = "openrouter_mcp:main"
+openrouter-mcp-server = "openrouter_mcp:main"
+
+[project.urls]
+Homepage = "https://github.com/CxOrg/openrouter-mcp"
+Issues = "https://github.com/CxOrg/openrouter-mcp/issues"
+
+[tool.setuptools]
+package-dir = { "" = "mcp" }
+py-modules = ["openrouter_mcp"]
