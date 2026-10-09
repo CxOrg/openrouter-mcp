@@ -1,4 +1,4 @@
-# openrouter-mcp
+# openrouter-mcp (Devin MCP Server)
 
 A dependency-free MCP (Model Context Protocol) server that exposes an
 `openrouter_chat` tool, letting your AI agent send prompts to any model hosted
