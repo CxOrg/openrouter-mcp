@@ -43,6 +43,31 @@ agent to *list MCP servers*.
 See [install.md](install.md) for manual installation, other clients, and
 uninstalling.
 
+## Usage in Devin
+
+After installing, type this in your local Devin prompt:
+
+```text
+Use openrouter_chat to ask sonnet: <your question>
+```
+
+Shorter phrasing such as `Ask openrouter sonnet: <your question>` usually
+works too — the server name plus an alias is enough for the agent to find
+the tool — but naming `openrouter_chat` explicitly guarantees the request
+is routed to OpenRouter instead of Devin's own model.
+
+Recommended patterns:
+
+| Goal | Prompt |
+|---|---|
+| Second opinion on a plan or diff | `Use openrouter_chat to get a second opinion from glm on: <paste plan/diff>` |
+| Offload a self-contained subtask | `Ask deepseek via openrouter_chat to <self-contained task>` |
+| Pick a specific model | `Use openrouter_chat with model opus to ...` |
+
+Use an alias (`sonnet`, `glm`, `deepseek`, ...) or any full OpenRouter id
+(`vendor/model`). Add `system` for a role/tone and `max_tokens` for long
+answers — see [install.md](install.md#usage) for the full argument table.
+
 ## License
 
 [MIT](LICENSE)
