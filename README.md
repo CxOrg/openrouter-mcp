@@ -21,7 +21,7 @@ instructions below use [Devin](https://devin.ai).
 
 ## Quick start
 
-**From PyPI** (not yet published — see [PUBLISHING.md](PUBLISHING.md)):
+**From PyPI:**
 
 ```bash
 uvx openrouter-mcp-server        # requires uv
