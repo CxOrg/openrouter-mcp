@@ -63,7 +63,7 @@ A template is provided in [mcp_config.example.json](mcp_config.example.json).
 Once published (see [PUBLISHING.md](PUBLISHING.md)), no clone is needed:
 
 ```bash
-uvx openrouter-mcp
+uvx openrouter-mcp-server
 ```
 
 Add the server to `~/.config/devin/mcp_config.json`:

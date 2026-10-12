@@ -5,8 +5,9 @@ A dependency-free MCP (Model Context Protocol) server that exposes an
 on [OpenRouter](https://openrouter.ai) — billed through your own OpenRouter
 key, not your agent's credits.
 
-Single Python file, standard library only. No pip installs, no Node, no build
-step.
+Single Python file, Python 3 standard library only — no third-party
+packages, no Node, no build step. Works with any MCP client; the
+instructions below use [Devin](https://devin.ai).
 
 ## Features
 
@@ -20,10 +21,10 @@ step.
 
 ## Quick start
 
-**From PyPI** (after first publish — see [PUBLISHING.md](PUBLISHING.md)):
+**From PyPI** (not yet published — see [PUBLISHING.md](PUBLISHING.md)):
 
 ```bash
-uvx openrouter-mcp        # run directly
+uvx openrouter-mcp-server        # requires uv
 # or: pip install openrouter-mcp-server
 ```
 
@@ -64,9 +65,10 @@ Recommended patterns:
 | Offload a self-contained subtask | `Ask deepseek via openrouter_chat to <self-contained task>` |
 | Pick a specific model | `Use openrouter_chat with model opus to ...` |
 
-Use an alias (`sonnet`, `glm`, `deepseek`, ...) or any full OpenRouter id
-(`vendor/model`). Add `system` for a role/tone and `max_tokens` for long
-answers — see [install.md](install.md#usage) for the full argument table.
+`model` is optional and defaults to `sonnet`; use an alias (`glm`,
+`deepseek`, ...) or any full OpenRouter id (`vendor/model`). Add `system`
+for a role/tone and `max_tokens` for long answers — see
+[install.md](install.md#usage) for the full argument table.
 
 ## License
 
